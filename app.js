@@ -1,8 +1,7 @@
 'use strict';
 
-// Design a guessing game about you that involves FIVE yes/no questions. Be creative and fun and whimsical. Or not. It's up to you! It's your project!
-// The questions in the guessing game must require a mix of yes/no answer1s, and user input must accept either y/n or yes/no responses, with either .toUpperCase() or .toLowerCase() used to validate the user input and accommodate users entering all-caps Y/N or YES/NO answers, too.
 var answer1 = prompt('Will Gary tolerate idiots?').toLowerCase();
+console.log('this question weeds out the jerks in the world.');
 if(answer1 != 0) {
   if (answer1 === 'yes' || answer1 === 'y') {
     alert('Well, tolerate is a strong word.');
@@ -16,8 +15,8 @@ if(answer1 != 0) {
   alert('You did not even answer... Idiot! Counts as wrong, I hope Gary tolerates you!')
 }
 
-
 var answer2 = prompt('Does Gary have any cats?').toLowerCase();
+console.log('he loves cats, dogs and animals of the world.');
 if(answer2 != 0) {
   if (answer2 === 'yes' || answer2 === 'y') {
     alert('Oops, wrong Gary used to have a cat. But no more.');
@@ -32,6 +31,7 @@ if(answer2 != 0) {
 }
 
 var answer3 = prompt('Has Gary been to Peru?').toLowerCase();
+console.log('he loves to travel, take him somewhere.');
 if(answer3 != 0) {
   if (answer3 === 'yes' || answer3 === 'y') {
     alert('You are right and he had a great time.');
@@ -46,6 +46,7 @@ if(answer3 != 0) {
 }
 
 var answer4 = prompt('Did Gary play an instrument in High School?').toLowerCase();
+console.log('it was the tuba! it was the tuba!');
 if(answer4 != 0) {
   if (answer4 === 'yes' || answer4 === 'y') {
     alert('Yep the tuba, you know him really well.');
@@ -60,6 +61,7 @@ if(answer4 != 0) {
 }
 
 var answer5 = prompt('Will Gary buy you a beer?').toLowerCase();
+console.log('maybe you could buy him a beer instead.');
 if(answer5 != 0) {
   if (answer5 === 'yes' || answer5 === 'y') {
     alert('Hmm, you can ask. He does love his beer.');
