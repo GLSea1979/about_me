@@ -7,7 +7,7 @@ if(answer1 != 0) {
     alert('Well, tolerate is a strong word.');
   } else
   if(answer1 === 'no' || answer1 === 'n') {
-    alert('Explain his friends than.');
+    alert('Explain his friends then.');
   } else {
     alert('That was not a valid answer, looks like we found one, but we will move on anyway.');
   }

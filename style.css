@@ -4,6 +4,8 @@ body {
   font-size: 20px;
 }
 header {
+  width: 80%;
+  border-radius: 10px;
   position: relative;
   background-color: #8c6954;
   text-align: center;
@@ -15,9 +17,23 @@ h1 {
 }
 img {
   position: absolute;
-  left:10px;
-  top: 10px;
-  width: 175px;
+  width: 200px;
+}
+#me {
+  top: 15px;
+  left: 15px;
+}
+#diving {
+  left: 15px;
+  top: 175px;
+}
+#boat {
+  right: 15px;
+  top: 15px;
+}
+#relaxing {
+  right: 15px;
+  top: 175px;
 }
 .navigate {
   font-size: 30px;
