@@ -1,6 +1,9 @@
 * {
   outline: 1px red solid;
 }
+body {
+  font-size: 20px;
+}
 header {
   position: relative;
   background-color: yellow;
@@ -17,8 +20,12 @@ img {
   top: 10px;
   width: 175px;
 }
+.navigate {
+  font-size: 30px;
+  display: inline-block;
+}
 ul li {
-  display:inline-block;
+
   background-color: green;
   margin: 2px auto;
 }
@@ -27,13 +34,17 @@ div {
   background-color: orange;
 }
 section {
-  postion: relative;
-  left: auto;
+  float: left;
   width: 70%;
   background-color: grey;
 }
 aside {
-  top: 0px;
+  text-align: center;
+  width: 30%;
   float: right;
   background-color: blue;
+
+}
+#game {
+  font-size: 75px;
 }
