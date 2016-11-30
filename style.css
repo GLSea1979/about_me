@@ -1,3 +1,39 @@
 * {
   outline: 1px red solid;
 }
+header {
+  position: relative;
+  background-color: yellow;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+}
+h1 {
+  font-size: 100px;
+}
+img {
+  position: absolute;
+  left:10px;
+  top: 10px;
+  width: 175px;
+}
+ul li {
+  display:inline-block;
+  background-color: green;
+  margin: 2px auto;
+}
+div {
+  position: relative;
+  background-color: orange;
+}
+section {
+  postion: relative;
+  left: auto;
+  width: 70%;
+  background-color: grey;
+}
+aside {
+  top: 0px;
+  float: right;
+  background-color: blue;
+}
