@@ -34,9 +34,11 @@ div {
   background-color: orange;
 }
 section {
+  text-align: center;
   float: left;
-  width: 70%;
+  width: 60%;
   background-color: grey;
+  padding: 5%;
 }
 aside {
   text-align: center;
