@@ -1,6 +1,8 @@
 'use strict';
+var username = prompt('Hi, we are going to play a guessing game. Most questions will be a simple yes or no. The first question is easy. What is your name?');
 
-var answer1 = prompt('Will Gary tolerate idiots?').toLowerCase();
+
+var answer1 = prompt('Yes or No, '+username+ ' ,will Gary tolerate idiots?').toLowerCase();
 console.log('this question weeds out the jerks in the world.');
 if(answer1 != 0) {
   if (answer1 === 'yes' || answer1 === 'y') {
@@ -15,7 +17,7 @@ if(answer1 != 0) {
   alert('You did not even answer... Idiot! Counts as wrong, I hope Gary tolerates you!')
 }
 
-var answer2 = prompt('Does Gary have any cats?').toLowerCase();
+var answer2 = prompt('Does Gary have any cats?' ).toLowerCase();
 console.log('he loves cats, dogs and animals of the world.');
 if(answer2 != 0) {
   if (answer2 === 'yes' || answer2 === 'y') {
