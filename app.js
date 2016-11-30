@@ -6,7 +6,7 @@ var correctAnswer = 0;
 
 var questions = [
   'Hi, we are going to play a guessing game. Most questions will be a simple yes or no. The first question is easy. What is your name?',
-  'Yes or No, will Gary tolerate idiots?'
+  'Yes or No, will Gary tolerate idiots?',
   'Does Gary have any cats?',
   'Has Gary been to Peru?',
   'Did Gary play an instrument in High School?',
@@ -32,7 +32,7 @@ var answersNo = [
 ];
 
 var consoleStatement = [
-  'Let us get to know each other.'
+  'Let us get to know each other.',
   'this question weeds out the jerks in the world.',
   'he loves cats, dogs and animals of the world.',
   'he loves to travel, take him somewhere.',
@@ -40,25 +40,7 @@ var consoleStatement = [
   'maybe you could buy him a beer instead.'
 ];
 
-while (var i = 0; i < questions.length) {
-  var insideAnswer =prompt(questions[i]).toLowerCase();
+for (var i = 0; i < questions.length; i++) {
+  var insideAnswer = prompt(questions[i]).toLowerCase();
   document.write(insideAnswer);
-}
-
-var username = prompt();
-
-
-var answer1 = prompt().toLowerCase();
-console.log();
-if(answer1 != 0) {
-  if (answer1 === 'yes' || answer1 === 'y') {
-    alert();
-  } else
-  if(answer1 === 'no' || answer1 === 'n') {
-    alert();
-  } else {
-    alert('That was not a valid answer but we will move on anyway.');
-  }
-} else {
-  alert('You did not even answer... Idiot! Counts as wrong, I hope Gary tolerates you!')
 }
