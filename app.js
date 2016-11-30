@@ -2,15 +2,15 @@
 
 
 var totalGuessCounter = 0;
-var correctAnswer = 0;
+var numberOfCorrectAnswer = 0;
 
 var questions = [
   'Hi, we are going to play a guessing game. Most questions will be a simple yes or no. The first question is easy. What is your name?',
   'Yes or No, will Gary tolerate idiots?',
-  'Does Gary have any cats?',
-  'Has Gary been to Peru?',
-  'Did Gary play an instrument in High School?',
-  'Will Gary buy you a beer?'
+  'Does Gary have any cats?               Yes or No',
+  'Has Gary been to Peru?               Yes or No',
+  'Did Gary play an instrument in High School?           Yes or No',
+  'Will Gary buy you a beer              Yes or No?'
  ];
 
 var answersYes = [
@@ -31,6 +31,8 @@ var answersNo = [
   'What kind of jerk do you think he is?'
 ];
 
+var correctAnswer = [true, true, , true, false, true, true];
+
 var consoleStatement = [
   'Let us get to know each other.',
   'this question weeds out the jerks in the world.',
@@ -42,5 +44,21 @@ var consoleStatement = [
 
 for (var i = 0; i < questions.length; i++) {
   var insideAnswer = prompt(questions[i]).toLowerCase();
-  document.write(insideAnswer);
+  console.log(consoleStatement[i]);
+
+  if(insideAnswer != 0) {
+    if (i === 0) {
+      alert(answersYes[i]);
+    }
+    if (insideAnswer === 'yes' || insideAnswer === 'y') {
+      alert(answersYes[i]);
+    } else
+    if(insideAnswer === 'no' || insideAnswer === 'n') {
+      alert(answersNo[i]);
+    } else {
+      alert('That was not a valid answer please try again.');
+    }
+  } else {
+    alert('You did not even answer... Idiot! Counts as wrong, I hope Gary tolerates you!')
+  }
 }
