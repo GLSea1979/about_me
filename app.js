@@ -62,3 +62,10 @@ for (var i = 0; i < questions.length; i++) {
     alert('You did not even answer... Idiot! Counts as wrong, I hope Gary tolerates you!')
   }
 }
+
+
+var numberGameAnswer = Math.floor(Math.random() * 100 + 1);
+var userNumberGuess = parseInt(prompt('Let us see if you can guess my favorite number. You will have four tries. What is your guess?    1-100'));
+
+console.log(userNumberGuess);
+console.log(numberGameAnswer);
