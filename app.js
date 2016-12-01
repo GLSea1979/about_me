@@ -42,75 +42,80 @@ var consoleStatement = [
   'it was the tuba! it was the tuba!',
   'maybe you could buy him a beer instead.'
 ];
+function questionsOneToFive (){
+  for (var i = 0; i < questions.length; i++) {
+    var insideAnswer = prompt(questions[i]).toLowerCase();
+    console.log(consoleStatement[i]);
+    totalGuessCounter +=1;
 
-for (var i = 0; i < questions.length; i++) {
-  var insideAnswer = prompt(questions[i]).toLowerCase();
-  console.log(consoleStatement[i]);
-  totalGuessCounter +=1;
-
-  if(insideAnswer !== 0) {
-    if (i === 0) {
-      alert(answersYes[i]);
-    } else
-    if (insideAnswer === 'yes' || insideAnswer === 'y') {
-      alert(answersYes[i]);
-      if (correctAnswer[i] === true) {
-        numberOfCorrectAnswer += 1;
-      }
-    } else
-    if(insideAnswer === 'no' || insideAnswer === 'n') {
-      alert(answersNo[i]);
-      if (correctAnswer[i] === true) {
-        numberOfCorrectAnswer += 1;
+    if(insideAnswer !== 0) {
+      if (i === 0) {
+        alert(answersYes[i]);
+      } else
+      if (insideAnswer === 'yes' || insideAnswer === 'y') {
+        alert(answersYes[i]);
+        if (correctAnswer[i] === true) {
+          numberOfCorrectAnswer += 1;
+        }
+      } else
+      if(insideAnswer === 'no' || insideAnswer === 'n') {
+        alert(answersNo[i]);
+        if (correctAnswer[i] === true) {
+          numberOfCorrectAnswer += 1;
+        }
+      } else {
+        alert('That was not a valid answer.');
       }
     } else {
-      alert('That was not a valid answer.');
+      alert('You did not even answer... Idiot! Counts as wrong, I hope Gary tolerates you!')
     }
-  } else {
-    alert('You did not even answer... Idiot! Counts as wrong, I hope Gary tolerates you!')
   }
 }
+function questionSix (){
+  var numberGameAnswer = Math.floor(Math.random() * 100 + 1);
+  console.log(numberGameAnswer);
+  var userNumberGuess = parseInt(prompt('Let us see if you can guess my favorite number. You will have four tries. What is your guess?    1-100'));
+  console.log(userNumberGuess);
+  var guessDirection = '';
+  var j = 3;
+  while (j > 0) {
 
-var numberGameAnswer = Math.floor(Math.random() * 100 + 1);
-console.log(numberGameAnswer);
-var userNumberGuess = parseInt(prompt('Let us see if you can guess my favorite number. You will have four tries. What is your guess?    1-100'));
-console.log(userNumberGuess);
-var guessDirection = '';
-var j = 3;
-while (j > 0) {
-
-  if (userNumberGuess === numberGameAnswer) {
-    j = 0;
-    alert('Hey you got it!');
-    numberOfCorrectAnswer +=1;
-  } else {
-
-    if (userNumberGuess > numberGameAnswer) {
-        guessDirection = 'Too high!';
-    }
-    if (userNumberGuess < numberGameAnswer) {
-      guessDirection = 'A bit low!';
-    }
-    userNumberGuess = parseInt(prompt('Sorry wrong answer. '+ guessDirection + ' You have ' + j + ' guesses left. What is your guess?'));
-    j -= 1;
-    totalGuessCounter += 1;
-  }
-}
-
-for (var i = 6; i > 0; i--) {
-  var stateGuess = prompt('What states has Gary lived in besides Washington? Please input a full state name or two initials. You have ' + i + ' guesses left.').toUpperCase();
-  totalGuessCounter +=1;
-  for (var k = 0; k < placesLived.length; k++) {
-    if (stateGuess === placesLived[k]) {
-      alert('You got one! Gary has lived in Minnesota, Alaska, Arizona and Washington.');
+    if (userNumberGuess === numberGameAnswer) {
+      j = 0;
+      alert('Hey you got it!');
       numberOfCorrectAnswer +=1;
-      k = placesLived.length + 1;
-      i = 0;
+    } else {
+
+      if (userNumberGuess > numberGameAnswer) {
+          guessDirection = 'Too high!';
+      }
+      if (userNumberGuess < numberGameAnswer) {
+        guessDirection = 'A bit low!';
+      }
+      userNumberGuess = parseInt(prompt('Sorry wrong answer. '+ guessDirection + ' You have ' + j + ' guesses left. What is your guess?'));
+      j -= 1;
+      totalGuessCounter += 1;
     }
   }
-  console.log(stateGuess);
 }
-
+function questionSeven(){
+  for (var i = 6; i > 0; i--) {
+    var stateGuess = prompt('What states has Gary lived in besides Washington? Please input a full state name or two initials. You have ' + i + ' guesses left.').toUpperCase();
+    totalGuessCounter +=1;
+    for (var k = 0; k < placesLived.length; k++) {
+      if (stateGuess === placesLived[k]) {
+        alert('You got one! Gary has lived in Minnesota, Alaska, Arizona and Washington.');
+        numberOfCorrectAnswer +=1;
+        k = placesLived.length + 1;
+        i = 0;
+      }
+    }
+    console.log(stateGuess);
+  }
+}
+questionsOneToFive();
+questionSix();
+questionSeven();
 
 console.log('total guess ' + totalGuessCounter);
 console.log('number right ' + numberOfCorrectAnswer);
