@@ -48,20 +48,22 @@ for (var i = 0; i < questions.length; i++) {
   var insideAnswer = prompt(questions[i]).toLowerCase();
   console.log(consoleStatement[i]);
   totalGuessCounter +=1;
-  if (correctAnswer[i] === true) {
-    numberOfCorrectAnswer += 1;
-  }
+
   if(insideAnswer !== 0) {
     if (i === 0) {
       alert(answersYes[i]);
-
-      numberOfCorrectAnswer +=1;
     } else
     if (insideAnswer === 'yes' || insideAnswer === 'y') {
       alert(answersYes[i]);
+      if (correctAnswer[i] === true) {
+        numberOfCorrectAnswer += 1;
+      }
     } else
     if(insideAnswer === 'no' || insideAnswer === 'n') {
       alert(answersNo[i]);
+      if (correctAnswer[i] === true) {
+        numberOfCorrectAnswer += 1;
+      }
     } else {
       alert('That was not a valid answer.');
     }
