@@ -1,6 +1,5 @@
 'use strict';
 
-
 var totalGuessCounter = 0;
 var numberOfCorrectAnswer = 0;
 
@@ -111,5 +110,7 @@ for (var i = 6; i > 0; i--) {
   }
   console.log(stateGuess);
 }
+
+
 console.log('total guess ' + totalGuessCounter);
 console.log('number right ' + numberOfCorrectAnswer);
