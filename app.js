@@ -31,6 +31,8 @@ var answersNo = [
   'What kind of jerk do you think he is?'
 ];
 
+var placesLived = ['ARIZONA', 'AZ', 'ALASKA', 'AK', 'MINNESOTA', 'MN'];
+
 var correctAnswer = [true, true, , true, false, true, true];
 
 var consoleStatement = [
@@ -63,9 +65,37 @@ for (var i = 0; i < questions.length; i++) {
   }
 }
 
-
 var numberGameAnswer = Math.floor(Math.random() * 100 + 1);
-var userNumberGuess = parseInt(prompt('Let us see if you can guess my favorite number. You will have four tries. What is your guess?    1-100'));
-
-console.log(userNumberGuess);
 console.log(numberGameAnswer);
+var userNumberGuess = parseInt(prompt('Let us see if you can guess my favorite number. You will have four tries. What is your guess?    1-100'));
+console.log(userNumberGuess);
+var guessDirection = '';
+var j = 3;
+while (j > 0) {
+
+  if (userNumberGuess === numberGameAnswer) {
+    j = 0;
+    alert('Hey you got it!');
+  } else {
+    j -= 1;
+    if (userNumberGuess > numberGameAnswer) {
+        guessDirection = 'Too high!';
+    }
+    if (userNumberGuess < numberGameAnswer) {
+      guessDirection = 'A bit low!';
+    }
+    userNumberGuess = parseInt(prompt('Sorry wrong answer. '+ guessDirection + ' You have ' + j + ' guesses left. What is your guess?'));
+  }
+}
+
+for (var i = 0; i < 5; i++) {
+  var stateGuess = prompt('What states has Gary lived in besides Washington? Please input a full state name or two initials.').toUpperCase();
+  for (var k = 0; k < placesLived.length; k++) {
+    if (stateGuess === placesLived[k]) {
+      alert('You got one!');
+      k = placesLived.length + 1;
+      i = 10;
+    }
+  }
+  console.log(stateGuess);
+}
