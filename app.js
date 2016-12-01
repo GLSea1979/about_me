@@ -77,7 +77,7 @@ while (j > 0) {
     j = 0;
     alert('Hey you got it!');
   } else {
-    j -= 1;
+
     if (userNumberGuess > numberGameAnswer) {
         guessDirection = 'Too high!';
     }
@@ -85,16 +85,18 @@ while (j > 0) {
       guessDirection = 'A bit low!';
     }
     userNumberGuess = parseInt(prompt('Sorry wrong answer. '+ guessDirection + ' You have ' + j + ' guesses left. What is your guess?'));
+    j -= 1;
   }
 }
 
-for (var i = 0; i < 5; i++) {
-  var stateGuess = prompt('What states has Gary lived in besides Washington? Please input a full state name or two initials.').toUpperCase();
+for (var i = 6; i > 0; i--) {
+  var stateGuess = prompt('What states has Gary lived in besides Washington? Please input a full state name or two initials. You have ' + i + ' guesses left.').toUpperCase();
   for (var k = 0; k < placesLived.length; k++) {
     if (stateGuess === placesLived[k]) {
-      alert('You got one!');
+      alert('You got one! Gary has lived in Minnesota, Alaska, Arizona and Washington.');
+
       k = placesLived.length + 1;
-      i = 10;
+      i = 10;ori
     }
   }
   console.log(stateGuess);
