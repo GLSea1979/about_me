@@ -33,7 +33,7 @@ var answersNo = [
 
 var placesLived = ['ARIZONA', 'AZ', 'ALASKA', 'AK', 'MINNESOTA', 'MN'];
 
-var correctAnswer = [true, true, , true, false, true, true];
+var correctAnswer = [true, true, true, false, true, true];
 
 var consoleStatement = [
   'Let us get to know each other.',
@@ -47,18 +47,23 @@ var consoleStatement = [
 for (var i = 0; i < questions.length; i++) {
   var insideAnswer = prompt(questions[i]).toLowerCase();
   console.log(consoleStatement[i]);
-
-  if(insideAnswer != 0) {
+  totalGuessCounter +=1;
+  if (correctAnswer[i] === true) {
+    numberOfCorrectAnswer += 1;
+  }
+  if(insideAnswer !== 0) {
     if (i === 0) {
       alert(answersYes[i]);
-    }
+
+      numberOfCorrectAnswer +=1;
+    } else
     if (insideAnswer === 'yes' || insideAnswer === 'y') {
       alert(answersYes[i]);
     } else
     if(insideAnswer === 'no' || insideAnswer === 'n') {
       alert(answersNo[i]);
     } else {
-      alert('That was not a valid answer please try again.');
+      alert('That was not a valid answer.');
     }
   } else {
     alert('You did not even answer... Idiot! Counts as wrong, I hope Gary tolerates you!')
@@ -76,6 +81,7 @@ while (j > 0) {
   if (userNumberGuess === numberGameAnswer) {
     j = 0;
     alert('Hey you got it!');
+    numberOfCorrectAnswer +=1;
   } else {
 
     if (userNumberGuess > numberGameAnswer) {
@@ -86,18 +92,22 @@ while (j > 0) {
     }
     userNumberGuess = parseInt(prompt('Sorry wrong answer. '+ guessDirection + ' You have ' + j + ' guesses left. What is your guess?'));
     j -= 1;
+    totalGuessCounter += 1;
   }
 }
 
 for (var i = 6; i > 0; i--) {
   var stateGuess = prompt('What states has Gary lived in besides Washington? Please input a full state name or two initials. You have ' + i + ' guesses left.').toUpperCase();
+  totalGuessCounter +=1;
   for (var k = 0; k < placesLived.length; k++) {
     if (stateGuess === placesLived[k]) {
       alert('You got one! Gary has lived in Minnesota, Alaska, Arizona and Washington.');
-
+      numberOfCorrectAnswer +=1;
       k = placesLived.length + 1;
-      i = 10;ori
+      i = 0;
     }
   }
   console.log(stateGuess);
 }
+console.log('total guess ' + totalGuessCounter);
+console.log('number right ' + numberOfCorrectAnswer);
