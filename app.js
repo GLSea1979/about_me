@@ -10,7 +10,7 @@ var questions = [
   'Has Gary been to Peru?               Yes or No',
   'Did Gary play an instrument in High School?           Yes or No',
   'Will Gary buy you a beer              Yes or No?'
- ];
+];
 
 var answersYes = [
   'That is a fine name.',
@@ -87,7 +87,7 @@ function questionSix (){
     } else {
 
       if (userNumberGuess > numberGameAnswer) {
-          guessDirection = 'Too high!';
+        guessDirection = 'Too high!';
       }
       if (userNumberGuess < numberGameAnswer) {
         guessDirection = 'A bit low!';
