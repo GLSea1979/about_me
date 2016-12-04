@@ -7,83 +7,109 @@ Pallette
 #fc814a  orange
 
 */
-
-* {
-  border: 2px solid blue;
-}
 body {
-  background-color: #f4f4f4;
-  font-size: 20px;
   color: #5a5b66;
 }
 header {
+  /*border: 4px solid #5a5b66;*/
   width: 80%;
   border-radius: 10px;
+  color: #f4f4f4;
   position: relative;
-  background-color: #bfbfbf;
+  background-color: #fc814a;
   text-align: center;
   padding: 10px;
-  margin: auto;
+  margin: 5px auto 50px;
 }
 h1 {
-  font-size: 100px;
-}
-img {
-  position: absolute;
-  width: 200px;
-}
-#me {
-  top: 15px;
-  left: 15px;
-}
-#diving {
-  left: 15px;
-  top: 175px;
-}
-#boat {
-  right: 15px;
-  top: 15px;
-}
-#relaxing {
-  right: 15px;
-  top: 175px;
-}
-.navigate {
-  font-size: 30px;
-}
-ul {
-  margin: 5px auto 5px auto;
-  display: inline-block;
-  padding: 20px;
-  margin: 2px auto;
-  font-size: 30px;
-}
-#education {
-  float: right;
-}
-#experience {
-  float: left;
-}
-li{
-  font-size: 20px;
-}
-div {
-  position: relative;
-}
-section {
-  text-align: center;
-  float: left;
-  width: 60%;
-  padding: 5%;
-}
-aside {
-  text-align: center;
-  width: 30%;
-  float: right;
-}
-#game {
   font-size: 75px;
 }
-ol {
-  clear: both;
+#container {
+    width: 100%;
+    margin: 0 auto;
 }
+#navigator {
+    position: fixed;
+    top: 200px;
+    width: 25%;
+}
+
+#primary {
+    float: left;
+    width: 25%;
+}
+
+#content {
+    text-align: center;
+    float: left;
+    width: 50%;
+    list-style-position:inside;
+}
+
+#secondary {
+    float: left;
+    width: 25%;
+}
+
+#footer {
+    text-align: center;
+    clear: both;
+}
+/* unvisited link */
+a:link {
+    color: #96939b;
+}
+
+/* visited link */
+a:visited {
+    color: #5a5b66;
+}
+
+/* mouse over link */
+a:hover {
+    color: #fc814a;
+    /*font-size: 150%;*/
+    /*border-radius: 10px;
+    padding: 4px;
+    background-color: #fc814a;*/
+}
+
+/* selected link */
+a:active {
+    color: #bfbfbf;
+}
+/*
+Pallette
+#f4f4f4  light grey
+#bfbfbf  light-medium grey
+#5a5b66  dark grey
+#96939b  dark-medium grey
+#fc814a  orange
+
+*/
+h2 {
+  font-size: 45px;
+  /*text-align: center;*/
+}
+nav p {
+  padding: 5px 0 5px 60px;
+}
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: -50px;
+    left: 150px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border: 1px solid #fc814a;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 2px 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
