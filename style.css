@@ -55,44 +55,31 @@ h1 {
     text-align: center;
     clear: both;
 }
-/* unvisited link */
+
 a:link {
     color: #96939b;
 }
-
-/* visited link */
 a:visited {
     color: #5a5b66;
 }
-
-/* mouse over link */
 a:hover {
     color: #fc814a;
-    /*font-size: 150%;*/
-    /*border-radius: 10px;
-    padding: 4px;
-    background-color: #fc814a;*/
 }
-
-/* selected link */
 a:active {
     color: #bfbfbf;
 }
-/*
-Pallette
-#f4f4f4  light grey
-#bfbfbf  light-medium grey
-#5a5b66  dark grey
-#96939b  dark-medium grey
-#fc814a  orange
 
-*/
 h2 {
   font-size: 45px;
   /*text-align: center;*/
 }
 nav p {
   padding: 5px 0 5px 60px;
+}
+.gameBox {
+  text-align: center;
+  margin: 10px auto;
+
 }
 .dropdown {
     position: relative;
@@ -113,3 +100,4 @@ nav p {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
