@@ -113,9 +113,11 @@ function questionSeven(){
     console.log(stateGuess);
   }
 }
+/*  functions added by Jeff */
 questionsOneToFive();
 questionSix();
 questionSeven();
+document.write('You got '+numberOfCorrectAnswer+ ' correct answers out of '+totalGuessCounter+ ' guesses.');
 
 console.log('total guess ' + totalGuessCounter);
 console.log('number right ' + numberOfCorrectAnswer);
